@@ -16,6 +16,7 @@ bot.onText(/\/start/, (msg) => {
     bot.sendMessage(
         msg.chat.id,
         `hello ${msg.chat.first_name}, welcome...\n
+        Selamat datang di bot islahuddin
         click /predict`
     );   
 });
@@ -25,7 +26,7 @@ bot.onText(/\/predict/, (msg) => {
     console.log(msg)
     bot.sendMessage(
         msg.chat.id,
-        `masukan nilai i|v contohnya 9|9`
+        `input nilai i|v contohnya 5|5`
     );   
     state = 1;
 });
