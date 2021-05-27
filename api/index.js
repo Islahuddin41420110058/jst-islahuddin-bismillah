@@ -16,15 +16,7 @@ bot.onText(/\/start/, (msg) => {
     bot.sendMessage(
         msg.chat.id,
         `hello ${msg.chat.first_name}, welcome...\n
-        click /menu to main menu`
-    );   
-});
-
-bot.onText(/\/menu/, (msg) => { 
-    console.log(msg)
-    bot.sendMessage(
-        msg.chat.id,
-        `this is your main menu`
+        click /predict`
     );   
 });
 
@@ -40,7 +32,6 @@ bot.onText(/\/predict/, (msg) => {
 
 bot.on('message', (msg) => {
     if(state == 1){
-        console.log(msg.text);
         s = msg.text.split("|");
         i = s [0]
         v = s [1]
@@ -77,4 +68,3 @@ r.get('/prediction/:i/:r', function(req, res, next) {
 });
 
 module.exports = r;
-
